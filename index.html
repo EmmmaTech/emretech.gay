@@ -1,15 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirecting...</title>
+    <title>EmreTech's Website</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1>Redirecting...</h1>
+    <div class="header" id="header">
+        <h1>EmreTech's Website</h1>
 
-    <script>
-        var timeoutID = setTimeout(1000);
-        window.location.replace("./Home/index.html");
-    </script>
+        <!--
+        <nav class="navbar">
+            <a href="#header">Home</a>
+            <a href="#projects">Projects</a>
+        </nav>
+        -->
+    </div>
+
+    <div class="main">
+        <div class="section" id="info">
+            <img id="pfp" src="./assets/50607143.png" alt="EmreTech's profile picture" width="200" height="200">
+
+            <h2>EmreTech</h1>
+            <p>Artist, Programmer, Epic Gamer</p>
+
+            <a id="discord-server" href="https://discord.gg/WXKMvK2NRe">
+                <img src="./assets/icon_clyde_white_RGB.svg" alt="Discord Logo" width="32" height="32">
+            </a>
+
+            <a id="reddit-profile" href="https://reddit.com/u/EmreTech">
+                <img src="./assets/reddit_icon.webp" alt="Reddit Logo" width="32" height="32">
+            </a>
+
+            <a id="github" href="https://github.com/EmreTech">
+                <p>GitHub (placeholder)</p>
+            </a>
+        </div>
+        
+        <br>
+
+        <div class="section" id="languages">
+            <h2>Programming languages EmreTech uses</h2>
+
+            <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="section" id="projects">
+            <h2>Projects EmreTech has worked on</h2>
+
+            <ul>
+                <!--Discord related stuff-->
+                <li>DisBotPy - A new approach to Discord API Wrapper libs. Coming soon.</li>
+                <li>Session - A highly customizable Discord bot made with Pycord in Python. Coming soon.</li>
+                <!--Homebrew apps-->
+                <li><a href="https://github.com/EmreTech/Calculator_NX">Calculator_NX</a> - A calculator application, ported to the Switch!</li>
+                <li><a href="https://github.com/EmreTech/NotesNX">NotesNX</a> - A note taking application on your Switch. Hasn't been released yet.</li>
+                <!--Misc.-->
+                <li><a href="https://github.com/t2linux/T2-Gentoo-Kernel">T2-Gentoo-Kernel</a> - Linux kernels with both patches to run on T2 Macs and Gentoo exclusive patches.</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
