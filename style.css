@@ -4,8 +4,9 @@ body {
 }
 
 .header {
-    padding: 20px;
-    text-align: center;
+    padding: 1px 10px;
+    border-radius: 10px;
+    text-align: left;
     
     background: #1abc9c;
     color: white;
@@ -15,18 +16,50 @@ body {
     font-size: 40px;
 }
 
+.footer {
+    padding: 1px 10px;
+    border-radius: 10px;
+    text-align: center;
+    
+    background: slategrey;
+    color: white;
+}
+
 .navbar {
     overflow: hidden;
 }
 
 .navbar a {
+    color: white;
+}
+
+.button {
     float: left;
     display: inline;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+}
+
+#button-landing {
+    float: none;
+    margin: 20px;
 
     color: white;
+    background-color: black;
+}
+
+#button-regular {
+    float: none;
+    margin: 40px;
+
+    color: white;
+    background-color: black;
+}
+
+#button-regular:hover {
+    background-color: #ddd;
+    color: black;
 }
 
 .navbar a:hover {
@@ -42,37 +75,103 @@ body {
     flex: 100%;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .section {
-    text-align: left;
+    text-align: center;
     padding: 20px;
+    margin: 20px;
     border-radius: 20px;
+    display: block;
+    flex-direction: column;
 
     background-color: slategrey;
     color: white;
 }
 
+.section a {
+    text-decoration: none;
+    color: blue;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 125px;
+    margin-bottom: 125px;
+}
+
+#landing {
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+
+    background-color: #1abc9c;
+}
+
+#landing h2 {
+    margin: 5px 0px;
+}
+
+#landing p {
+    margin: 5px 0px;
+}
+
+#landing-background {
+    background-color: #1abc9c;
+}
+
 #pfp {
     border-radius: 50%;
+    align-self: center;
+    margin: 10px;
 }
 
 #discord-server {
     padding: 10px;
+    text-decoration: none;
 }
 
 #reddit-profile {
     padding: 10px;
+    text-decoration: none;
 }
 
 #github {
     padding: 10px;
+    text-decoration: none;
+}
+
+#platforms {
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        justify-content: stretch;
+    }
+
+    .column {
+        margin-top: 250px;
+        margin-bottom: 250px;
+    }
 }
 
 @media screen and (max-width: 420px) {
-    .navbar a {
-        display: block;
-        float: none;
-        width: 100%;
+    .navbar {
+        visibility: hidden;
+        width: 0;
+        height: 0;
     }
 }
