@@ -73,7 +73,7 @@ body {
 
 .main {
     flex: 100%;
-    padding: 20px;
+    padding-bottom: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -94,6 +94,15 @@ body {
 .section a {
     text-decoration: none;
     color: blue;
+}
+
+.section-buttons {
+    display: inline-flex;
+}
+
+.section-buttons #button-regular {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .row {
