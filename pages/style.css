@@ -1,3 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.top-section {
+    @apply bg-white py-10 px-16 drop-shadow-2xl;
+    border-radius: 20px;
+}
+
+.profile-button {
+    @apply inline-flex px-2 py-1 h-min mx-2;
+}
+
+.profile-button svg {
+    @apply drop-shadow-2xl;
+    transition: fill 0.5s;
+}
+
+.profile-button svg {
+    @apply fill-white w-8 h-8;
+}
+
+.profile-picture {
+    @apply drop-shadow-2xl;
+    border-radius: 50%;
+}
+
+#discord-profile svg {
+    @apply fill-blurple;
+}
+
+#discord-profile:hover svg {
+    @apply fill-old-blurple;
+}
+
+#reddit-profile svg {
+    @apply fill-orangered;
+}
+
+#reddit-profile:hover svg {
+    @apply fill-orangered-alt;
+}
+
+#github-profile svg {
+    @apply fill-github-gray;
+}
+
+#github-profile:hover svg {
+    @apply fill-github-gray-alt;
+}
+
+#source-code svg {
+    @apply fill-gray-800;
+}
+
+#source-code:hover svg {
+    @apply fill-gray-500;
+}
+
+/*
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
@@ -184,3 +244,4 @@ body {
         height: 0;
     }
 }
+*/
