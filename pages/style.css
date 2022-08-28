@@ -2,9 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.top-section {
-    @apply bg-white py-10 px-16 drop-shadow-2xl;
+#top-section {
     border-radius: 20px;
+    transition: 1s ease;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.custom-hidden {
+    opacity: 0%
 }
 
 .profile-button {
@@ -55,6 +63,14 @@
 
 #source-code:hover svg {
     @apply fill-gray-500;
+}
+
+#arrow {
+    transition: 1s ease;
+}
+
+#arrow:hover {
+    transform: translateY(30px);
 }
 
 /*
@@ -245,3 +261,9 @@ body {
     }
 }
 */
+
+@media screen and (max-width: 490px) {
+    #platforms {
+        justify-content: stretch;
+    }
+}
