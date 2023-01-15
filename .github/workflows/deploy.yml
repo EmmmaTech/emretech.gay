@@ -36,4 +36,4 @@ jobs:
 
           git add output.css
           git commit -m "Auto Deploy"
-          git push -f -u origin gh-pages
+          git push -f -u origin/gh-pages
