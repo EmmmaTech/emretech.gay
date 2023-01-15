@@ -32,6 +32,7 @@ jobs:
           git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
           git fetch
-          git add .
+          git add dist
           git commit -m "Auto Deploy"
-          git push -f origin gh-pages
+          git status
+          git push --force origin gh-pages
