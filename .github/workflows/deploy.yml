@@ -21,8 +21,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          mkdir dist
-          ./tailwindcss -i style.css -o dist/output.css
+          ./tailwindcss -i style.css -o output.css
 
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.name "Webpage Deployer"
@@ -32,7 +31,7 @@ jobs:
           git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
           git fetch
-          git add dist
+          git add output.css
           git commit -m "Auto Deploy"
           git status
           git push --force origin gh-pages
