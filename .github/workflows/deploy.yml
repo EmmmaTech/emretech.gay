@@ -20,6 +20,12 @@ jobs:
 
       - name: Test thing
         run: |
+          mkdir dist
+          ./tailwindcss -i style.css -o dist/output.css
+
+          git config user.name "Webpage Deployer"
+
           git fetch
-          git checkout gh-pages
-          ./tailwindcss --help
+          git add .
+          git commit -m "Auto Deploy"
+          git push -f origin/gh-pages
