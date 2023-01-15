@@ -18,8 +18,6 @@ jobs:
           mv tailwindcss-linux-x64 tailwindcss
 
       - name: Build and Deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./tailwindcss -i style.css -o output.css
           rm tailwindcss
@@ -27,13 +25,7 @@ jobs:
           git config user.name "Webpage Deployer"
           git config user.email "webpage-deployer@users.noreply.github.com"
 
-          git remote rm origin
-          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git fetch
-
-          git branch
-          git show-ref
-
           git add output.css
           git commit -m "Auto Deploy"
           git push -f -u origin origin/gh-pages
