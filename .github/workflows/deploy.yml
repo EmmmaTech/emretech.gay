@@ -26,6 +26,8 @@ jobs:
           git config user.email "webpage-deployer@users.noreply.github.com"
 
           git fetch
+          git checkout origin/gh-pages
+
           git add output.css
           git commit -m "Auto Deploy"
           git push -f -u origin origin/gh-pages
