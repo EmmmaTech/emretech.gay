@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [tailwind-refactor]
+    branches: [main]
 
 jobs:
   deploy:
