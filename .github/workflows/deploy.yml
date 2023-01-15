@@ -24,6 +24,7 @@ jobs:
           ./tailwindcss -i style.css -o dist/output.css
 
           git config user.name "Webpage Deployer"
+          git config user.email "webpage-deployer@users.noreply.emretech.github.io"
 
           git fetch
           git add .
