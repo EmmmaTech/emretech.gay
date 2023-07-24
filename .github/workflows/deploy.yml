@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,15 +17,33 @@ jobs:
           chmod +x tailwindcss-linux-x64
           mv tailwindcss-linux-x64 tailwindcss
 
-      - name: Build and Deploy
+      - name: Build
         run: |
           ./tailwindcss -i style.css -o output.css
           rm tailwindcss
 
-          git config user.name "Webpage Deployer"
-          git config user.email "webpage-deployer@users.noreply.github.com"
+          # Additional unnecessary files to remove
+          rm README.md tailwind.config.js
 
-          git fetch
-          git add output.css
-          git commit -m "Auto Deploy"
-          git push
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: .
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    # TODO: is this necessary?
+    #environment:
+    #  name: github-pages
+    #  url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
