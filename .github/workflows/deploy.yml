@@ -23,7 +23,7 @@ jobs:
           rm tailwindcss
 
           # Additional unnecessary files to remove
-          rm README.md tailwind.config.js
+          rm README.md tailwind.config.js style.css
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v2
