@@ -60,32 +60,3 @@
 #source-code:hover svg {
     @apply fill-gray-500;
 }
-
-.section {
-    @apply bg-gray-600 px-14 py-10 m-10;
-    border-radius: 20px;
-    transition: 1s ease;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 250px;
-}
-
-.section h1 {
-    @apply text-white text-2xl m-3;
-}
-
-.section p {
-    @apply text-white;
-}
-
-.section li {
-    @apply text-white;
-}
-
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
