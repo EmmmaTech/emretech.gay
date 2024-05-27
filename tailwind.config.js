@@ -3,7 +3,7 @@
 const colors = require("tailwindcss/colors")
 
 module.exports = {
-  content: ["./index.html"],
+  content: ["./pages/index.html"],
   theme: {
     colors: {
       black: colors.black,
@@ -19,6 +19,9 @@ module.exports = {
       "orangered-alt": "#FF8100",
       "github-gray": "#171515", // GitHub Branding color
       "github-gray-alt": "#515151",
+      "c-logo": "#A8B9CC",
+      "cpp-logo": "#00599C",
+      "python-logo": "#3776AB",
     },
     extend: {},
   },

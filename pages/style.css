@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#open-sidebar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 
+        background-color 0.3s ease,
+        left 0.3s ease;
+}
+
+#open-sidebar:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#sidebar {
+    display: none;
+    width: 25%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    transition: all 1s;
+    position: fixed;
+    top: 0%;
+}
+
+#sidebar a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#sidebar a:hover {
+    @apply bg-gray-800 text-white;
+}
+
+#main {
+    flex: 1;
+    transition: margin 0.3s ease;
+}
+
+#top {
+    background-image: url("../assets/blake-verdoorn-cssvEZacHvQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section {
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    @apply drop-shadow-2xl;
+    border-radius: 50%;
+}
+
+.platform {
+    @apply inline-flex flex-col items-center justify-center px-2 h-min mx-1;
+}
+
+.platform svg {
+    @apply fill-gray-800 w-6 h-6;
+    transition: fill 0.5s;
+}
+
+.platform p {
+    @apply text-sm;
+    transition: fill 0.6s;
+}
+
+.discord p, .discord svg {
+    @apply fill-blurple text-blurple;
+}
+
+.discord:hover p, .discord:hover svg {
+    @apply fill-old-blurple text-old-blurple;
+}
+
+.reddit p, .reddit svg {
+    @apply fill-orangered text-orangered;
+}
+
+.reddit:hover p, .reddit:hover svg {
+    @apply fill-orangered-alt text-orangered-alt;
+}
+
+.github p, .github svg {
+    @apply fill-github-gray text-github-gray;
+}
+
+.github:hover p, .github:hover svg {
+    @apply fill-github-gray-alt text-github-gray-alt;
+}
+
+#source-code p, #source-code svg {
+    @apply fill-gray-800 text-gray-800;
+}
+
+#source-code:hover p, #source-code:hover svg {
+    @apply fill-gray-500 text-gray-500;
+}
+
+#image-source p, #image-source svg {
+    @apply fill-gray-800 text-gray-800;
+}
+
+#image-source:hover p, #image-source:hover svg {
+    @apply fill-gray-500 text-gray-500;
+}
+
+.lang {
+    @apply w-14 h-14 mx-4 my-2;
+}
+
+#c {
+    @apply fill-c-logo;
+}
+
+#cpp {
+    @apply fill-cpp-logo;
+}
+
+#python {
+    @apply fill-python-logo;
+}
+
+.project {
+    width: 50%;
+    @apply bg-blue-300 px-14 py-8 m-5 justify-between
+}
+
+@media screen and (max-width: 820px) {
+    #about {
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    #about .section {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .emoji {
+        width: 9rem;
+        height: 9rem;
+    }
+}
